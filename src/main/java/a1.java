@@ -1,29 +1,14 @@
 
-public class CarInfo {
-	private String id;
-	private boolean privateCar;
-	private int speed;
-	
+
 	public boolean illegal(int maxSpeed) {
 		if(this.speed > maxSpeed || this.privateCar == true) {
 			return true;
 		}
 		return false;
 	}
-}
 
 
-public class CameraInfo {
-	
-	private int city;
-	private int maxSpeed;
-	private CarInfo[] cars;
-	
-	
-	public int getCity() {
-		return city;
-	}
-	
+
 	public boolean allGood() {
 		for(int i = 0; i< cars.length ; i++) {
 			if(cars[i].illegal(maxSpeed) == true) {
@@ -32,10 +17,10 @@ public class CameraInfo {
 		}
 		return true;
 	}
-}
 
 
-public class Main {
+
+
 	
 	public static int legalCities(CameraInfo[] cameras) {
 		int sumGoodCities = 0;
@@ -55,4 +40,4 @@ public class Main {
 		}
 		return (sumGoodCities - deleteC);
 	}
-}
+
