@@ -41,7 +41,7 @@ public class Main {
 		int sumGoodCities = 0;
 		int count = 0;
 		int deleteC = 0;
-		for(int i = 0 ; i < cameras.length-1; i++) {
+		for(int i = 0 ; i < cameras.length; i++) {
 			if(cameras[i].allGood() == true) {
 				sumGoodCities++;
 				count++;
